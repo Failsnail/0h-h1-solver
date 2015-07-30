@@ -30,7 +30,7 @@ void grid::initialize(const int& newDiagonal) {
     //set all boxes to empty
     int totalBoxes = getTotalBoxes();
     for (int n = 0; n < totalBoxes; n++) {
-        (*this)(n) = empty;
+        (*this)(n) = EMPTY;
     }
 }
 
@@ -47,9 +47,8 @@ grid& grid::operator = (const grid& rhs) {
 
 box& grid::operator () (const int& x, const int& y) const {
     assert(x >= 0 && x < diagonal && y >= 0 && y < diagonal);
-    assert(matrix != nullptr);
 
-    return *(matrix + diagonal * x + y);
+    return (*this)(diagonal * x + y);
 }
 
 box& grid::operator () (const int& n) const {
@@ -59,7 +58,7 @@ box& grid::operator () (const int& n) const {
     return *(matrix + n);
 }
 
-int grid::getDiagonal() const {
+const int& grid::getDiagonal() const {
     return diagonal;
 }
 

@@ -6,16 +6,16 @@
 using namespace std;
 
 enum box {
-    empty,
-    red,
-    blue
+    EMPTY,
+    RED,
+    BLUE
 };
 
 inline string boxToString(const box& box_) {
     switch (box_) {
-        case empty: return "empty";
-        case red:   return "red";
-        case blue:  return "blue";
+        case EMPTY: return "empty";
+        case RED:   return "red";
+        case BLUE:  return "blue";
     }
     return "ERROR";
 }

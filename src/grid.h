@@ -22,14 +22,14 @@ class grid {
         box& operator () (const int& x, const int& y) const;
         box& operator () (const int& n) const;
 
-        int getDiagonal() const;
+        const int& getDiagonal() const;
         int getTotalBoxes() const;
 
         void printMatrix() const;
     protected:
     private:
         int diagonal = 0;
-        box *matrix = nullptr;
+        box* matrix = nullptr;
 };
 
 #endif // GRID_H

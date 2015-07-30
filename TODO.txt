@@ -1,0 +1,5 @@
+implement the solver::areColumnsUnequal and solver::areRowsUnequal functions
+test the testing functions a lot
+move all the testing functions to a seperate class (which can be used by both solvers and the main)
+make a simple input- method
+hack a solver to test everything
