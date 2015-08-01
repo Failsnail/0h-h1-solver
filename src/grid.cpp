@@ -18,14 +18,14 @@ grid::~grid() {
 
 void grid::initialize(const int& newDiagonal) {
     //clean old matrix
-    if (diagonal != 0){
+    if (diagonal != 0 || matrix != nullptr){
         delete[] matrix;
         diagonal = 0;
     }
 
     //make new empty matrix
     diagonal = newDiagonal;
-    matrix = new box[diagonal * diagonal];
+    matrix = new boxValue[diagonal * diagonal];
 
     //set all boxes to empty
     int totalBoxes = getTotalBoxes();
@@ -45,13 +45,13 @@ grid& grid::operator = (const grid& rhs) {
     return *this;
 }
 
-box& grid::operator () (const int& x, const int& y) const {
+boxValue& grid::operator () (const int& x, const int& y) const {
     assert(x >= 0 && x < diagonal && y >= 0 && y < diagonal);
 
     return (*this)(diagonal * x + y);
 }
 
-box& grid::operator () (const int& n) const {
+boxValue& grid::operator () (const int& n) const {
     assert(n >= 0 && n < diagonal * diagonal);
     assert(matrix != nullptr);
 

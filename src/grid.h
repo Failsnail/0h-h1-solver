@@ -7,6 +7,7 @@
 
 #include <box.h>
 
+using namespace box;
 using namespace std;
 
 class grid {
@@ -19,8 +20,8 @@ class grid {
         void initialize(const int& newDiagonal);
 
         grid& operator = (const grid& other);
-        box& operator () (const int& x, const int& y) const;
-        box& operator () (const int& n) const;
+        boxValue& operator () (const int& x, const int& y) const;
+        boxValue& operator () (const int& n) const;
 
         const int& getDiagonal() const;
         int getTotalBoxes() const;
@@ -29,7 +30,7 @@ class grid {
     protected:
     private:
         int diagonal = 0;
-        box* matrix = nullptr;
+        boxValue* matrix = nullptr;
 };
 
 #endif // GRID_H

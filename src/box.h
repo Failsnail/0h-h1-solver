@@ -3,21 +3,20 @@
 
 #include <string>
 
-using namespace std;
+namespace box {
+    enum boxValue {
+        EMPTY,
+        RED,
+        BLUE
+    };
 
-enum box {
-    EMPTY,
-    RED,
-    BLUE
-};
-
-inline string boxToString(const box& box_) {
-    switch (box_) {
-        case EMPTY: return "empty";
-        case RED:   return "red";
-        case BLUE:  return "blue";
+    inline std::string boxToString(const boxValue& box_) {
+        switch (box_) {
+            case EMPTY: return "empty";
+            case RED:   return "red";
+            case BLUE:  return "blue";
+        }
+        return "ERROR";
     }
-    return "ERROR";
 }
-
 #endif //BOX_H

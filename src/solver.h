@@ -1,9 +1,10 @@
 #ifndef SOLVER_H
 #define SOLVER_H
 
-#include <iostream>
 #include <box.h>
 #include <grid.h>
+
+using namespace box;
 
 class solver {
     public:
@@ -20,7 +21,8 @@ class solver {
         bool areRowsUnequal     (const grid& grid_) const;
     protected:
     private:
-        bool isArrayValid(const box* const list, const int& diagonal) const;
+        bool areArraysEqual(const boxValue* const list1, const boxValue* const list2, const int& diagonal) const;
+        bool isArrayValid(const boxValue* const list, const int& diagonal) const;
 };
 
 #endif // SOLVER_H

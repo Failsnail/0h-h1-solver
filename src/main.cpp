@@ -5,6 +5,7 @@
 #include <grid.h>
 #include <solver.h>
 
+using namespace box;
 using namespace std;
 
 int main() {
