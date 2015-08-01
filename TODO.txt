@@ -1,5 +1,7 @@
-implement the solver::areColumnsUnequal and solver::areRowsUnequal functions
+move all the testing functions to a namespace where they are free functions
+    try to make the interface of the namespace clear by providing a header file with function defenitions
+    DON'T put the functions operating on arrays in the public interface! (are only to be used internally by other functions in the namespace)
 test the testing functions a lot
-move all the testing functions to a seperate class (which can be used by both solvers and the main)
-make a simple input- method
-hack a solver to test everything
+make a simple input method
+hack a solver (recursive!) to test everything
+test everything a lot
