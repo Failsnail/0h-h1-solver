@@ -5,7 +5,7 @@
 #include <string>
 #include <assert.h>
 
-#include <box.h>
+#include "box.h"
 
 using namespace box;
 using namespace std;

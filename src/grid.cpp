@@ -70,7 +70,7 @@ void grid::printMatrix() const {
     cout << endl;
     for (int y = 0; y < diagonal; y++) {
         for (int x = 0; x < diagonal; x++) {
-            cout << boxToString((*this)(x, y)) << "\t";
+            cout << (*this)(x, y) << "\t";
         }
         cout << endl;
     }
