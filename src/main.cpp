@@ -6,6 +6,7 @@
 #include "utilities.h"
 #include "solver.h"
 #include "recursivesolver.h"
+#include "naiverecursivesolver.h"
 
 using namespace box;
 using namespace std;
