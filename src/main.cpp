@@ -44,11 +44,13 @@ void getInput(const int& diagonal, int& x, int& y, boxValue& currentValue, bool&
 
 int main() {
 
-    bool startSolving = false, isRunning = true, succesfullSolve;
+    bool isRunning = true, succesfullSolve;
     int x, y;
     boxValue currentValue;
 
     int diagonal;
+
+    int startSolving;
 
     cout << "Enter the diagonal: " << endl;
     cin >> diagonal;
@@ -77,11 +79,14 @@ int main() {
             cout << "the grid isn't valid" << endl;
         }
 
-        cout << "start solving? (0 = false, 1 = true)";
-        cin >> startSolving;
-        cout << endl;
+        do {
+            cout << "start solving? (0 = false, 1 = true) ";
+            cin >> startSolving;
+            cout << endl;
+        } while (startSolving != 0 && startSolving != 1);
 
         if (startSolving) {
+            cout << "solving..." << endl;
             succesfullSolve = mySolver->solve(&grid1);
             if (succesfullSolve) {
                 cout << "a solution was found!" << endl;
