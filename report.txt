@@ -1,0 +1,7 @@
+4x4 (3,3) = BLUE (0,0) = RED
+recursiveSolver without early termination:  14,017
+recursive with early termination:           5 (2,803x faster)
+
+6x6 (3,3) = BLUE (0,0) = RED
+recursiveSolver without early termination:  will probably never end (estemation: 2^(6*6-2) = 17,179,869,184)
+recursive with early termination:           6
